@@ -16,8 +16,6 @@ module Puppet::Parser::Functions
     raise Puppet::ParseError, "pdbfactpost:  please supply a host as argument 1" unless args[0].is_a?(String)
     raise Puppet::ParseError, "pdbfactpost:  please supply a data hash as argument 2" unless args[1].is_a?(Hash) 
 
-    Puppet.parse_config
-
     def format_command(payload, command, version)
       message = {
         :command => command,
